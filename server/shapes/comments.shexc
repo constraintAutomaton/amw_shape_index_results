@@ -10,6 +10,7 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     ldbcvoc:browserUsed xsd:string ;
     ldbcvoc:content xsd:string ;
     ldbcvoc:lenght xsd:int ;
+    ldbcvoc:hasTag IRI *;
     ldbcvoc:replyOf <{:Post}> ;
     ldbcvoc:isLocatedIn IRI ;
     ldbcvoc:hasCreator IRI ;
