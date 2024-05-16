@@ -1,0 +1,19 @@
+{
+  "name": "Link-queue-experiment",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "comunica-feature-link-traversal/engines/*",
+    "comunica-feature-link-traversal/packages/*"
+  ],
+  "scripts": {
+    "solidbench-generate": "SolidBench.js/bin/solidbench generate -f ./fragmenter-config-pod.json",
+    "solidbench-serve": "SolidBench.js/bin/solidbench serve --config ./server-config.json",
+    "clean": "rm -rf out-enhanced out-fragments out-queries out-snb out-validate out-validate-params/"
+  },
+  "dependencies": {
+    "output-interceptor": "^4.1.0"
+  }
+}

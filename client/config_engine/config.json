@@ -1,0 +1,65 @@
+{
+    "@context": [
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql/^2.0.0/components/context.jsonld",
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-link-traversal/^0.0.0/components/context.jsonld",
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-extract-links-predicates/^0.0.0/components/context.jsonld",
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-extract-links-solid-type-index/^0.0.0/components/context.jsonld",
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-extract-links-quad-pattern-query/^0.0.0/components/context.jsonld",
+        "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^3.0.0/components/context.jsonld"
+    ],
+    "import": [
+        "ccqslt:config/config-solid-base.json",
+        "ccqslt:config/rdf-resolve-hypermedia-links-queue/actors/wrapper-info-occupancy.json"
+    ],
+    "@graph": [
+        {
+            "@id": "urn:comunica:default:Runner",
+            "@type": "Runner",
+            "actors": [
+                {
+                    "@id": "urn:comunica:default:extract-links/actors#predicates-common",
+                    "@type": "ActorExtractLinksPredicates",
+                    "checkSubject": false,
+                    "predicateRegexes": [
+                        "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                        "http://www.w3.org/2002/07/owl##sameAs",
+                        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+                    ],
+                    "labelLinksWithReachability":true
+                },
+                {
+                    "@id": "urn:comunica:default:extract-links/actors#predicates-ldp",
+                    "@type": "ActorExtractLinksPredicates",
+                    "checkSubject": true,
+                    "predicateRegexes": [
+                        "http://www.w3.org/ns/ldp#contains"
+                    ],
+                    "labelLinksWithReachability":true
+                },
+                {
+                    "@id": "urn:comunica:default:extract-links/actors#predicates-solid",
+                    "@type": "ActorExtractLinksPredicates",
+                    "checkSubject": true,
+                    "predicateRegexes": [
+                        "http://www.w3.org/ns/pim/space#storage"
+                    ],
+                    "labelLinksWithReachability":true
+                },
+                {
+                    "@id": "urn:comunica:default:extract-links/actors#quad-pattern-query",
+                    "@type": "ActorExtractLinksQuadPatternQuery",
+                    "labelLinksWithReachability":true
+                },
+                {
+                    "@id": "urn:comunica:default:extract-links/actors#solid-type-index",
+                    "@type": "ActorExtractLinksSolidTypeIndex",
+                    "inference": false,
+                    "mediatorDereferenceRdf": {
+                        "@id": "urn:comunica:default:dereference-rdf/mediators#main"
+                    },
+                    "labelLinksWithReachability":true
+                }
+            ]
+        }
+    ]
+}

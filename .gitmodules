@@ -1,0 +1,11 @@
+[submodule "client/comunica-feature-link-traversal"]
+	path = client/comunica-feature-link-traversal
+	url = https://github.com/constraintAutomaton/comunica-feature-link-traversal.git
+	branch = feature/feature/shapeIndex
+[submodule "server/rdf-dataset-fragmenter.js"]
+	path = server/rdf-dataset-fragmenter.js
+	url = https://github.com/constraintAutomaton/rdf-dataset-fragmenter.js.git
+	branch = feature/shapeIndex
+[submodule "server/SolidBench.js"]
+	path = server/SolidBench.js
+	url = https://github.com/SolidBench/SolidBench.js.git

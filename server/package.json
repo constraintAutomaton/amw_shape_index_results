@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "rdf-dataset-fragmenter": "file:./rdf-dataset-fragmenter.js"
+
+  },
+  "scripts": {
+    "solidbench-generate": "node SolidBench.js/bin/solidbench.js generate -f ./fragmenter-config-pod.json",
+    "solidbench-serve": "node SolidBench.js/bin/solidbench.js serve --config ./server-config.json",
+    "clean": "rm -rf out-enhanced out-fragments out-queries out-snb out-validate out-validate-params/"
+  }
+}
