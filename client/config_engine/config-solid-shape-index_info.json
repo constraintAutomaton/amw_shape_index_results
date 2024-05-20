@@ -5,11 +5,16 @@
   ],
   "import": [
     "ccqslt:config/config-solid-base.json",
+    "ccqslt:config/extract-links/actors/predicates-common.json",
+    "ccqslt:config/extract-links/actors/predicates-ldp.json",
+    "ccqslt:config/extract-links/actors/predicates-solidstorage.json",
     "ccqslt:config/extract-links/actors/quad-pattern-query.json",
     "ccqslt:config/extract-links/actors/solid-shape-index.json",
+    
+    "ccqslt:config/context-preprocess/actors/key-filter.json",
 
     "ccqslt:config/rdf-resolve-hypermedia-links-queue/actors/wrapper-filter-links.json",
+    "ccqslt:config/rdf-resolve-hypermedia-links-queue/actors/wrapper-info-occupancy.json"
 
-    "ccqslt:config/context-preprocess/actors/key-filter.json"
   ]
 }

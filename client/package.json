@@ -9,11 +9,10 @@
     "comunica-feature-link-traversal/packages/*"
   ],
   "scripts": {
-    "solidbench-generate": "SolidBench.js/bin/solidbench generate -f ./fragmenter-config-pod.json",
-    "solidbench-serve": "SolidBench.js/bin/solidbench serve --config ./server-config.json",
-    "clean": "rm -rf out-enhanced out-fragments out-queries out-snb out-validate out-validate-params/"
+    "benchmark": "node --max-old-space-size=16192 index.mjs &> ./result/log"
   },
   "dependencies": {
+    "commander": "^12.1.0",
     "output-interceptor": "^4.1.0"
   }
 }
