@@ -455,7 +455,7 @@
         "strategy": {
           "@type": "FragmentationStrategyShape",
           "tripleShapeTreeLocator": true,
-          "contentOfStorage": ["comments", "posts", "card", "noise", "settings"],
+          "contentOfStorage": ["comments", "posts", "cards"],
           "shapeConfig": {
             "comments": {
               "shapes": ["./shapes/comments.shexc"],
@@ -467,7 +467,7 @@
               "directory": "posts",
               "name": "Post"
             },
-            "card": {
+            "cards": {
               "shapes": ["./shapes/profile.shexc"],
               "directory": "profile",
               "name": "Profile"

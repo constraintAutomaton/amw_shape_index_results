@@ -5,7 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "rdf-dataset-fragmenter": "file:./rdf-dataset-fragmenter.js"
-
   },
   "scripts": {
     "solidbench-generate": "node SolidBench.js/bin/solidbench.js generate -f ./fragmenter-config-pod.json",

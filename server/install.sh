@@ -11,3 +11,4 @@ pushd SolidBench.js
     yarn build || true
 popd
 yarn link "rdf-dataset-fragmenter"
+yarn install

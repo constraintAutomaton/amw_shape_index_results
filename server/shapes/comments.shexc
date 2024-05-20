@@ -8,10 +8,14 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     ldbcvoc:creationDate xsd:dateTime ;
     ldbcvoc:locationIP xsd:string  ;
     ldbcvoc:browserUsed xsd:string ;
-    ldbcvoc:content xsd:string ;
+    ldbcvoc:content xsd:string?;
     ldbcvoc:lenght xsd:int ;
     ldbcvoc:hasTag IRI *;
-    ldbcvoc:replyOf <{:Post}> ;
+    (
+        ldbcvoc:replyOf @<{:Post}> *;
+        |
+        ldbcvoc:replyOf @<{:Comment}> *;
+    );
     ldbcvoc:isLocatedIn IRI ;
-    ldbcvoc:hasCreator IRI ;
+    ldbcvoc:hasCreator @<{:Profile}> ;
 }
