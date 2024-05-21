@@ -58,7 +58,7 @@ async function executeQuery(configPath, query, timeout) {
     const start = new Date().getTime();
 
     bindingsStream.on('data', (binding) => {
-      results.push(binding);
+      results.push(JSON.parse(binding.toString()));
     });
 
     bindingsStream.on('error', (err) => {

@@ -1,11 +1,9 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { open } from 'node:fs/promises';
-import { join } from "path";
 
 const REGEX_RESULT = /New query started index (?<index>.+) version (?<version>v\d) with engine (?<config>.+)/u;
 const HTTP_REQUEST_IDENTIFIER = "INFO: Requesting";
 const logFile = "./result/log";
-const RESULT_FOLDER = "./result";
 
 const mapping = {
     "./config_engine/config-solid-shape-index.json": "./result/shape_index_result.json",

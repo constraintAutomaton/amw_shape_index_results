@@ -1,27 +1,27 @@
 {
   "queries/parsed/interactive-complex-8.sparql.json": {
     "v0": {
-      "n_http_requests": 25592,
+      "n_http_requests": 17517,
       "execution_time": "Error",
       "n_results": -1
     },
     "v1": {
-      "n_http_requests": 14297,
+      "n_http_requests": 19158,
       "execution_time": "Error",
       "n_results": -1
     },
     "v2": {
-      "n_http_requests": 15382,
+      "n_http_requests": 15943,
       "execution_time": "Error",
       "n_results": -1
     },
     "v3": {
-      "n_http_requests": 22072,
+      "n_http_requests": 27756,
       "execution_time": "Error",
       "n_results": -1
     },
     "v4": {
-      "n_http_requests": 23589,
+      "n_http_requests": 14853,
       "execution_time": "Error",
       "n_results": -1
     }
@@ -29,189 +29,189 @@
   "queries/parsed/interactive-discover-1.sparql.json": {
     "v0": {
       "n_http_requests": 76,
-      "execution_time": 1137,
+      "execution_time": 1279,
       "n_results": 6
     },
     "v1": {
       "n_http_requests": 7,
-      "execution_time": 25,
+      "execution_time": 33,
       "n_results": 4
     },
     "v2": {
       "n_http_requests": 7,
-      "execution_time": 13,
+      "execution_time": 15,
       "n_results": 1
     },
     "v3": {
       "n_http_requests": 22,
-      "execution_time": 95,
+      "execution_time": 80,
       "n_results": 14
     },
     "v4": {
       "n_http_requests": 64,
-      "execution_time": 1098,
+      "execution_time": 1387,
       "n_results": 8
     }
   },
   "queries/parsed/interactive-discover-3.sparql.json": {
     "v0": {
       "n_http_requests": 242,
-      "execution_time": 710,
+      "execution_time": 734,
       "n_results": 71
     },
     "v1": {
       "n_http_requests": 136,
-      "execution_time": 156,
+      "execution_time": 173,
       "n_results": 67
     },
     "v2": {
       "n_http_requests": 92,
-      "execution_time": 119,
+      "execution_time": 125,
       "n_results": 55
     },
     "v3": {
       "n_http_requests": 413,
-      "execution_time": 683,
+      "execution_time": 684,
       "n_results": 203
     },
     "v4": {
       "n_http_requests": 262,
-      "execution_time": 772,
+      "execution_time": 832,
       "n_results": 142
     }
   },
   "queries/parsed/interactive-discover-4.sparql.json": {
     "v0": {
       "n_http_requests": 51,
-      "execution_time": 227,
+      "execution_time": 252,
       "n_results": 5
     },
     "v1": {
       "n_http_requests": 10,
-      "execution_time": 177,
+      "execution_time": 207,
       "n_results": 3
     },
     "v2": {
       "n_http_requests": 10,
-      "execution_time": 129,
+      "execution_time": 163,
       "n_results": 3
     },
     "v3": {
       "n_http_requests": 194,
-      "execution_time": 565,
+      "execution_time": 610,
       "n_results": 3
     },
     "v4": {
       "n_http_requests": 60,
-      "execution_time": 324,
+      "execution_time": 342,
       "n_results": 7
     }
   },
   "queries/parsed/interactive-discover-5.sparql.json": {
     "v0": {
       "n_http_requests": 116,
-      "execution_time": 311,
+      "execution_time": 367,
       "n_results": 15
     },
     "v1": {
       "n_http_requests": 8,
-      "execution_time": 22,
+      "execution_time": 23,
       "n_results": 3
     },
     "v2": {
       "n_http_requests": 8,
-      "execution_time": 16,
+      "execution_time": 28,
       "n_results": 3
     },
     "v3": {
       "n_http_requests": 207,
-      "execution_time": 92,
+      "execution_time": 95,
       "n_results": 4
     },
     "v4": {
       "n_http_requests": 111,
-      "execution_time": 302,
+      "execution_time": 299,
       "n_results": 20
     }
   },
   "queries/parsed/interactive-discover-6.sparql.json": {
     "v0": {
-      "n_http_requests": 32189,
+      "n_http_requests": 26407,
       "execution_time": "Error",
       "n_results": -1
     },
     "v1": {
       "n_http_requests": 9,
-      "execution_time": 182,
+      "execution_time": 190,
       "n_results": 1
     },
     "v2": {
       "n_http_requests": 9,
-      "execution_time": 99,
+      "execution_time": 107,
       "n_results": 1
     },
     "v3": {
-      "n_http_requests": 27432,
+      "n_http_requests": 29103,
       "execution_time": "Error",
       "n_results": -1
     },
     "v4": {
       "n_http_requests": 112,
-      "execution_time": 2126,
+      "execution_time": 2203,
       "n_results": 27
     }
   },
   "queries/parsed/interactive-discover-7.sparql.json": {
     "v0": {
-      "n_http_requests": 24726,
+      "n_http_requests": 26130,
       "execution_time": "Error",
       "n_results": -1
     },
     "v1": {
       "n_http_requests": 9,
-      "execution_time": 146,
+      "execution_time": 200,
       "n_results": 1
     },
     "v2": {
       "n_http_requests": 9,
-      "execution_time": 106,
+      "execution_time": 142,
       "n_results": 1
     },
     "v3": {
-      "n_http_requests": 27435,
+      "n_http_requests": 20202,
       "execution_time": "Error",
       "n_results": -1
     },
     "v4": {
       "n_http_requests": 112,
-      "execution_time": 2349,
+      "execution_time": 3114,
       "n_results": 1
     }
   },
   "queries/parsed/interactive-short-1.sparql.json": {
     "v0": {
       "n_http_requests": 7,
-      "execution_time": 55,
+      "execution_time": 33,
       "n_results": 1
     },
     "v1": {
       "n_http_requests": 7,
-      "execution_time": 27,
+      "execution_time": 33,
       "n_results": 1
     },
     "v2": {
       "n_http_requests": 7,
-      "execution_time": 28,
+      "execution_time": 37,
       "n_results": 1
     },
     "v3": {
       "n_http_requests": 7,
-      "execution_time": 25,
+      "execution_time": 30,
       "n_results": 1
     },
     "v4": {
       "n_http_requests": 7,
-      "execution_time": 27,
+      "execution_time": 37,
       "n_results": 1
     }
   },
@@ -223,7 +223,7 @@
     },
     "v1": {
       "n_http_requests": 11,
-      "execution_time": 0,
+      "execution_time": 1,
       "n_results": 0
     },
     "v2": {
@@ -233,12 +233,12 @@
     },
     "v3": {
       "n_http_requests": 144,
-      "execution_time": 1,
+      "execution_time": 0,
       "n_results": 0
     },
     "v4": {
       "n_http_requests": 10,
-      "execution_time": 1,
+      "execution_time": 2,
       "n_results": 0
     }
   }
