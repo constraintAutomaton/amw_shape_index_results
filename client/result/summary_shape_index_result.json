@@ -1,0 +1,245 @@
+{
+  "queries/parsed/interactive-complex-8.sparql.json": {
+    "v0": {
+      "n_http_requests": 25592,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v1": {
+      "n_http_requests": 14297,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v2": {
+      "n_http_requests": 15382,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v3": {
+      "n_http_requests": 22072,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v4": {
+      "n_http_requests": 23589,
+      "execution_time": "Error",
+      "n_results": -1
+    }
+  },
+  "queries/parsed/interactive-discover-1.sparql.json": {
+    "v0": {
+      "n_http_requests": 76,
+      "execution_time": 1137,
+      "n_results": 6
+    },
+    "v1": {
+      "n_http_requests": 7,
+      "execution_time": 25,
+      "n_results": 4
+    },
+    "v2": {
+      "n_http_requests": 7,
+      "execution_time": 13,
+      "n_results": 1
+    },
+    "v3": {
+      "n_http_requests": 22,
+      "execution_time": 95,
+      "n_results": 14
+    },
+    "v4": {
+      "n_http_requests": 64,
+      "execution_time": 1098,
+      "n_results": 8
+    }
+  },
+  "queries/parsed/interactive-discover-3.sparql.json": {
+    "v0": {
+      "n_http_requests": 242,
+      "execution_time": 710,
+      "n_results": 71
+    },
+    "v1": {
+      "n_http_requests": 136,
+      "execution_time": 156,
+      "n_results": 67
+    },
+    "v2": {
+      "n_http_requests": 92,
+      "execution_time": 119,
+      "n_results": 55
+    },
+    "v3": {
+      "n_http_requests": 413,
+      "execution_time": 683,
+      "n_results": 203
+    },
+    "v4": {
+      "n_http_requests": 262,
+      "execution_time": 772,
+      "n_results": 142
+    }
+  },
+  "queries/parsed/interactive-discover-4.sparql.json": {
+    "v0": {
+      "n_http_requests": 51,
+      "execution_time": 227,
+      "n_results": 5
+    },
+    "v1": {
+      "n_http_requests": 10,
+      "execution_time": 177,
+      "n_results": 3
+    },
+    "v2": {
+      "n_http_requests": 10,
+      "execution_time": 129,
+      "n_results": 3
+    },
+    "v3": {
+      "n_http_requests": 194,
+      "execution_time": 565,
+      "n_results": 3
+    },
+    "v4": {
+      "n_http_requests": 60,
+      "execution_time": 324,
+      "n_results": 7
+    }
+  },
+  "queries/parsed/interactive-discover-5.sparql.json": {
+    "v0": {
+      "n_http_requests": 116,
+      "execution_time": 311,
+      "n_results": 15
+    },
+    "v1": {
+      "n_http_requests": 8,
+      "execution_time": 22,
+      "n_results": 3
+    },
+    "v2": {
+      "n_http_requests": 8,
+      "execution_time": 16,
+      "n_results": 3
+    },
+    "v3": {
+      "n_http_requests": 207,
+      "execution_time": 92,
+      "n_results": 4
+    },
+    "v4": {
+      "n_http_requests": 111,
+      "execution_time": 302,
+      "n_results": 20
+    }
+  },
+  "queries/parsed/interactive-discover-6.sparql.json": {
+    "v0": {
+      "n_http_requests": 32189,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v1": {
+      "n_http_requests": 9,
+      "execution_time": 182,
+      "n_results": 1
+    },
+    "v2": {
+      "n_http_requests": 9,
+      "execution_time": 99,
+      "n_results": 1
+    },
+    "v3": {
+      "n_http_requests": 27432,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v4": {
+      "n_http_requests": 112,
+      "execution_time": 2126,
+      "n_results": 27
+    }
+  },
+  "queries/parsed/interactive-discover-7.sparql.json": {
+    "v0": {
+      "n_http_requests": 24726,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v1": {
+      "n_http_requests": 9,
+      "execution_time": 146,
+      "n_results": 1
+    },
+    "v2": {
+      "n_http_requests": 9,
+      "execution_time": 106,
+      "n_results": 1
+    },
+    "v3": {
+      "n_http_requests": 27435,
+      "execution_time": "Error",
+      "n_results": -1
+    },
+    "v4": {
+      "n_http_requests": 112,
+      "execution_time": 2349,
+      "n_results": 1
+    }
+  },
+  "queries/parsed/interactive-short-1.sparql.json": {
+    "v0": {
+      "n_http_requests": 7,
+      "execution_time": 55,
+      "n_results": 1
+    },
+    "v1": {
+      "n_http_requests": 7,
+      "execution_time": 27,
+      "n_results": 1
+    },
+    "v2": {
+      "n_http_requests": 7,
+      "execution_time": 28,
+      "n_results": 1
+    },
+    "v3": {
+      "n_http_requests": 7,
+      "execution_time": 25,
+      "n_results": 1
+    },
+    "v4": {
+      "n_http_requests": 7,
+      "execution_time": 27,
+      "n_results": 1
+    }
+  },
+  "queries/parsed/interactive-short-5.sparql.json": {
+    "v0": {
+      "n_http_requests": 31,
+      "execution_time": 1,
+      "n_results": 0
+    },
+    "v1": {
+      "n_http_requests": 11,
+      "execution_time": 0,
+      "n_results": 0
+    },
+    "v2": {
+      "n_http_requests": 164,
+      "execution_time": 1,
+      "n_results": 0
+    },
+    "v3": {
+      "n_http_requests": 144,
+      "execution_time": 1,
+      "n_results": 0
+    },
+    "v4": {
+      "n_http_requests": 10,
+      "execution_time": 1,
+      "n_results": 0
+    }
+  }
+}
