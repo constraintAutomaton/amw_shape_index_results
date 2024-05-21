@@ -9,7 +9,7 @@
     "comunica-feature-link-traversal/packages/*"
   ],
   "scripts": {
-    "benchmark": "node --max-old-space-size=16192 index.mjs &> ./result/log"
+    "benchmark": "node --max-old-space-size=56192 index.mjs &> ./result/log"
   },
   "dependencies": {
     "commander": "^12.1.0",
