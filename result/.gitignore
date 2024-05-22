@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+/venv/*
+/plots/query-discovery/*
+/plots/query-short/*
+!plots/query-discovery/.gitkeep
+!plots/query-short/.gitkeep
