@@ -46,6 +46,8 @@ async function executeQuery(configPath, query, timeout) {
       );
     }, timeout);
     let bindingsStream;
+    const start = new Date().getTime();
+
     try {
       bindingsStream = await engine.queryBindings(query, {
         lenient: true,
@@ -55,7 +57,6 @@ async function executeQuery(configPath, query, timeout) {
       reject(err);
     }
 
-    const start = new Date().getTime();
 
     bindingsStream.on('data', (binding) => {
       results.push(JSON.parse(binding.toString()));

@@ -7,9 +7,9 @@ const queriesFile = readdirSync(queryFolder);
 const queries = [];
 const TIMEOUT = 1 * 60 * 1000;
 const resultFolder = "result";
-const MEMORY_SIZE = 8192 * 4;
+const MEMORY_SIZE = 8192 * 1.5;
 const RESULT_REGEX = /response start\n(.*)\nresponse end/u;
-const REPETITION = 10;
+const REPETITION = 20;
 const HTTP_REQUEST_IDENTIFIER = "INFO: Requesting";
 
 
