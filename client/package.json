@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "commander": "^12.1.0",
-    "output-interceptor": "^4.1.0"
+    "sparql-benchmark-runner": "^4.0.2"
   }
 }
