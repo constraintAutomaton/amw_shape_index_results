@@ -1,6 +1,4 @@
 python -m venv ./venv
 source ./venv/bin/activate
-pip install pandas
-pip install matplotlib
-pip install jupyterlab
+pip install -r requirements.txt
 ipython kernel install --user --name=venv
