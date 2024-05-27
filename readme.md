@@ -113,7 +113,7 @@ Table presenting the percentage of reductions of the shape index approach in rel
 | short-5 version 3    | 18/40                | 12                                     | 1                                        | 0.89                                               |
 | short-5 version 4    | 12/12                | 59                                     | 12                                       | 0.47                                               |
 
-### Table of statistical performance
+### Table of statistical significance
 
 Table presenting the statistical significance of the results.
 
