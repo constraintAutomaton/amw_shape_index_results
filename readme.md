@@ -1,4 +1,69 @@
-## Table of performance
+# amw_shape_index_results
+A repository for the experiments in relation to the short paper "Opportunities for Shape-based Optimization of Traversal Queries over Decentralized Environments" submitted to the ["Alberto Mendelzon International Workshop on Foundations of Data Management"](https://amw2024.github.io/).
+
+## Dependencies
+- Python 3
+- Nodejs v18 or higher
+
+## Experiment
+The experiment consist of executing a [subset of the queries](client/queries) from the benchmark [Solidbench](https://github.com/SolidBench/SolidBench.js). 
+In each pod a complete shape index is added using a custom implementation of a [rdf-dataset-fragmenter.js](https://github.com/constraintAutomaton/rdf-dataset-fragmenter.js/tree/feature/shapeIndex).
+
+Example of a shape index
+```turtle
+<index1> a si:ShapeIndex ;
+  si:domain "http://localhost:3000/pods/00000000000000000065/.*" ;
+  si:entry [
+    si:bindByShape <http://localhost:3000/pods/00000000000000000065/profile_shape#Profile> ;
+    solid:instanceContainer <http://localhost:3000/pods/00000000000000000065/profile/>
+  ], [
+    si:bindByShape <http://localhost:3000/pods/00000000000000000065/posts_shape#Post> ;
+    solid:instanceContainer <http://localhost:3000/pods/00000000000000000065/posts/>
+  ] , [
+    si:bindByShape <http://localhost:3000/pods/00000000000000000065/comments_shape#Comment> ;
+    solid:instanceContainer <http://localhost:3000/pods/00000000000000000065/comments/>
+  ] ;
+  si:isComplete true .
+```
+
+To run the experiment two steps are necessary.
+- Generate and serve SolidBench
+- Run the Comunica client with selected queries
+
+### Generate and serve Solidbench
+```
+cd ./server
+./install
+yarn run solidbench-generate
+yarn run solidbench-serve
+```
+This will generate the data and serve an HTTP server hosting the data.
+
+### Run the benchmark
+
+```
+cd ./client
+./install
+yarn run benchmark
+```
+
+This will run the benchmark with every selected queries.
+The results including the log and the summary of the results will be available in `./client/result`
+
+## Results
+An analysis of the results is presented in `./result`.
+It is generated using a [jupyter notebook](https://jupyter.org/).
+To install all the dependencies inside a virtual the user can run `./create_python_env.sh` and to start the notebook using this environement in the browser `./execute_jupyter.sh`.
+Below some important figure are presented.
+
+### Result figure
+![Summary of the results](result/figure/combined.svg)
+The query execution time distribution (the upper graph) and the number of HTTP requests (the lower graph).
+The results of our approach are in blue and the state of the art (type index with LDP) in red.
+The results have been generated with 50 repetitions and a timeout of 6000 ms. 
+The queries are denoted with first the initial of the query template (e.g., S for interactive-\\**s**hort), and the version of the concrete query (e.g., V0).
+### Table of performance
+Table presenting the percentage of reductions of the shape index approach in relation to the type index approach. 
 
 | Query (SI/TI)        | Std execution time   | Percentage of reduction HTTP request   | Percentage of reduction execution time   | Ratio of HTTP request by ratio of execution time   |
 |----------------------|----------------------|----------------------------------------|------------------------------------------|----------------------------------------------------|
@@ -48,52 +113,54 @@
 | short-5 version 3    | 18/40                | 12                                     | 1                                        | 0.89                                               |
 | short-5 version 4    | 12/12                | 59                                     | 12                                       | 0.47                                               |
 
-## Table of statistical performance
+### Table of statistical performance
 
-| Query                 | Shape Index faster query execution   | P value   | Shape index similar value type index   | P value   |
-|-----------------------|--------------------------------------|-----------|----------------------------------------|-----------|
-| complex-8 version v0  | -                                    | -         | -                                      | -         |
-| complex-8 version v1  | -                                    | -         | -                                      | -         |
-| complex-8 version v2  | -                                    | -         | -                                      | -         |
-| complex-8 version v3  | -                                    | -         | -                                      | -         |
-| complex-8 version v4  | -                                    | -         | -                                      | -         |
-| discover-1 version v0 | True                                 | 1.57e-28  | False                                  | 3.14e-28  |
-| discover-1 version v1 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-1 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-1 version v3 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-1 version v4 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-3 version v0 | False                                | 1.09e-01  | True                                   | 2.17e-01  |
-| discover-3 version v1 | False                                | 6.62e-02  | True                                   | 1.32e-01  |
-| discover-3 version v2 | True                                 | 4.23e-08  | False                                  | 8.46e-08  |
-| discover-3 version v3 | False                                | 1.00e+00  | False                                  | 8.28e-18  |
-| discover-3 version v4 | False                                | 1.00e+00  | False                                  | 4.82e-21  |
-| discover-4 version v0 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-4 version v1 | True                                 | 1.77e-23  | False                                  | 3.54e-23  |
-| discover-4 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-4 version v3 | True                                 | 1.88e-19  | False                                  | 3.76e-19  |
-| discover-4 version v4 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-5 version v0 | True                                 | 1.90e-05  | False                                  | 3.80e-05  |
-| discover-5 version v1 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-5 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-5 version v3 | True                                 | 1.89e-07  | False                                  | 3.77e-07  |
-| discover-5 version v4 | True                                 | 5.69e-12  | False                                  | 1.14e-11  |
-| discover-6 version v0 | -                                    | -         | -                                      | -         |
-| discover-6 version v1 | True                                 | 5.46e-27  | False                                  | 1.09e-26  |
-| discover-6 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-6 version v3 | -                                    | -         | -                                      | -         |
-| discover-6 version v4 | False                                | 9.97e-01  | True                                   | 6.27e-03  |
-| discover-7 version v0 | -                                    | -         | -                                      | -         |
-| discover-7 version v1 | True                                 | 4.71e-28  | False                                  | 9.42e-28  |
-| discover-7 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| discover-7 version v3 | -                                    | -         | -                                      | -         |
-| discover-7 version v4 | True                                 | 9.23e-19  | False                                  | 1.85e-18  |
-| short-1 version v0    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-1 version v1    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-1 version v2    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-1 version v3    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-1 version v4    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-5 version v0    | True                                 | 5.00e-12  | False                                  | 1.00e-11  |
-| short-5 version v1    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
-| short-5 version v2    | False                                | 4.75e-02  | True                                   | 9.51e-02  |
-| short-5 version v3    | False                                | 5.84e-01  | True                                   | 8.37e-01  |
-| short-5 version v4    | True                                 | 3.89e-24  | False                                  | 7.78e-24  |
+Table presenting the statistical significance of the results.
+
+| Query                 | SI faster query execution   | P value   | SI different execution time than TI   | P value   |
+|-----------------------|-----------------------------|-----------|---------------------------------------|-----------|
+| complex-8 version v0  | -                           | -         | -                                     | -         |
+| complex-8 version v1  | -                           | -         | -                                     | -         |
+| complex-8 version v2  | -                           | -         | -                                     | -         |
+| complex-8 version v3  | -                           | -         | -                                     | -         |
+| complex-8 version v4  | -                           | -         | -                                     | -         |
+| discover-1 version v0 | True                        | 1.57e-28  | True                                  | 3.14e-28  |
+| discover-1 version v1 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-1 version v2 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-1 version v3 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-1 version v4 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-3 version v0 | False                       | 1.09e-01  | False                                 | 2.17e-01  |
+| discover-3 version v1 | False                       | 6.62e-02  | False                                 | 1.32e-01  |
+| discover-3 version v2 | True                        | 4.23e-08  | True                                  | 8.46e-08  |
+| discover-3 version v3 | False                       | 1.00e+00  | True                                  | 8.28e-18  |
+| discover-3 version v4 | False                       | 1.00e+00  | True                                  | 4.82e-21  |
+| discover-4 version v0 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-4 version v1 | True                        | 1.77e-23  | True                                  | 3.54e-23  |
+| discover-4 version v2 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-4 version v3 | True                        | 1.88e-19  | True                                  | 3.76e-19  |
+| discover-4 version v4 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-5 version v0 | True                        | 1.90e-05  | True                                  | 3.80e-05  |
+| discover-5 version v1 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-5 version v2 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-5 version v3 | True                        | 1.89e-07  | True                                  | 3.77e-07  |
+| discover-5 version v4 | True                        | 5.69e-12  | True                                  | 1.14e-11  |
+| discover-6 version v0 | -                           | -         | -                                     | -         |
+| discover-6 version v1 | True                        | 5.46e-27  | True                                  | 1.09e-26  |
+| discover-6 version v2 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-6 version v3 | -                           | -         | -                                     | -         |
+| discover-6 version v4 | False                       | 9.97e-01  | False                                 | 6.27e-03  |
+| discover-7 version v0 | -                           | -         | -                                     | -         |
+| discover-7 version v1 | True                        | 4.71e-28  | True                                  | 9.42e-28  |
+| discover-7 version v2 | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| discover-7 version v3 | -                           | -         | -                                     | -         |
+| discover-7 version v4 | True                        | 9.23e-19  | True                                  | 1.85e-18  |
+| short-1 version v0    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-1 version v1    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-1 version v2    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-1 version v3    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-1 version v4    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-5 version v0    | True                        | 5.00e-12  | True                                  | 1.00e-11  |
+| short-5 version v1    | True                        | 3.93e-29  | True                                  | 7.85e-29  |
+| short-5 version v2    | False                       | 4.75e-02  | False                                 | 9.51e-02  |
+| short-5 version v3    | False                       | 5.84e-01  | False                                 | 8.37e-01  |
+| short-5 version v4    | True                        | 3.89e-24  | True                                  | 7.78e-24  |
