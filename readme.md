@@ -47,3 +47,53 @@
 | short-5 version 2    | 27/37                | 9                                      | 1                                        | 0.92                                               |
 | short-5 version 3    | 18/40                | 12                                     | 1                                        | 0.89                                               |
 | short-5 version 4    | 12/12                | 59                                     | 12                                       | 0.47                                               |
+
+## Table of statistical performance
+
+| Query                 | Shape Index faster query execution   | P value   | Shape index similar value type index   | P value   |
+|-----------------------|--------------------------------------|-----------|----------------------------------------|-----------|
+| complex-8 version v0  | -                                    | -         | -                                      | -         |
+| complex-8 version v1  | -                                    | -         | -                                      | -         |
+| complex-8 version v2  | -                                    | -         | -                                      | -         |
+| complex-8 version v3  | -                                    | -         | -                                      | -         |
+| complex-8 version v4  | -                                    | -         | -                                      | -         |
+| discover-1 version v0 | True                                 | 1.57e-28  | False                                  | 3.14e-28  |
+| discover-1 version v1 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-1 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-1 version v3 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-1 version v4 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-3 version v0 | False                                | 1.09e-01  | True                                   | 2.17e-01  |
+| discover-3 version v1 | False                                | 6.62e-02  | True                                   | 1.32e-01  |
+| discover-3 version v2 | True                                 | 4.23e-08  | False                                  | 8.46e-08  |
+| discover-3 version v3 | False                                | 1.00e+00  | False                                  | 8.28e-18  |
+| discover-3 version v4 | False                                | 1.00e+00  | False                                  | 4.82e-21  |
+| discover-4 version v0 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-4 version v1 | True                                 | 1.77e-23  | False                                  | 3.54e-23  |
+| discover-4 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-4 version v3 | True                                 | 1.88e-19  | False                                  | 3.76e-19  |
+| discover-4 version v4 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-5 version v0 | True                                 | 1.90e-05  | False                                  | 3.80e-05  |
+| discover-5 version v1 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-5 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-5 version v3 | True                                 | 1.89e-07  | False                                  | 3.77e-07  |
+| discover-5 version v4 | True                                 | 5.69e-12  | False                                  | 1.14e-11  |
+| discover-6 version v0 | -                                    | -         | -                                      | -         |
+| discover-6 version v1 | True                                 | 5.46e-27  | False                                  | 1.09e-26  |
+| discover-6 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-6 version v3 | -                                    | -         | -                                      | -         |
+| discover-6 version v4 | False                                | 9.97e-01  | True                                   | 6.27e-03  |
+| discover-7 version v0 | -                                    | -         | -                                      | -         |
+| discover-7 version v1 | True                                 | 4.71e-28  | False                                  | 9.42e-28  |
+| discover-7 version v2 | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| discover-7 version v3 | -                                    | -         | -                                      | -         |
+| discover-7 version v4 | True                                 | 9.23e-19  | False                                  | 1.85e-18  |
+| short-1 version v0    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-1 version v1    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-1 version v2    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-1 version v3    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-1 version v4    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-5 version v0    | True                                 | 5.00e-12  | False                                  | 1.00e-11  |
+| short-5 version v1    | True                                 | 3.93e-29  | False                                  | 7.85e-29  |
+| short-5 version v2    | False                                | 4.75e-02  | True                                   | 9.51e-02  |
+| short-5 version v3    | False                                | 5.84e-01  | True                                   | 8.37e-01  |
+| short-5 version v4    | True                                 | 3.89e-24  | False                                  | 7.78e-24  |
