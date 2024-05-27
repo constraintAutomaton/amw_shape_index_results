@@ -61,7 +61,7 @@ Below some important figure are presented.
 The query execution time distribution (the upper graph) and the number of HTTP requests (the lower graph).
 The results of our approach are in blue and the state of the art (type index with LDP) in red.
 The results have been generated with 50 repetitions and a timeout of 6000 ms. 
-The queries are denoted with first the initial of the query template (e.g., S for interactive-\\**s**hort), and the version of the concrete query (e.g., V0).
+The queries are denoted with first the initial of the query template (e.g., S for interactive-**s**hort), and the version of the concrete query (e.g., V0).
 ### Table of performance
 Table presenting the percentage of reductions of the shape index approach in relation to the type index approach. 
 
