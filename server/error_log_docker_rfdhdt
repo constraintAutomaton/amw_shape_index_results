@@ -1,0 +1,23 @@
+RDF format: nquad
+ Loading Dictionary: 0 % / 0 %                       Generating Dictionary: 0 K triples processed.: 0 % / 0 %                       Sorting shared: 0 % / 40 %                       Sorting subjects: 20 % / 41 %                       Sorting objects: 50 % / 42.5 %                       Sorting predicates: 90 % / 44.5 %                       Update Dictionary IDs: 99 % / 44.95 %                       Loading Triples: 0 % / 50 %                       Generating Triples: 0 K triples processed.: 0 % / 50 %                       Sorting triples: 0 % / 89.2 %                       Converting to BitmapTriples: 0 % / 94.1 %                       Dictionary save shared area.: 0 % / 5 %                       Dictionary save subjects.: 0 % / 11.5 %                       Dictionary save predicates.: 0 % / 34.25 %                       Dictionary save objects.: 0 % / 44 %                       BitmapTriples saving Bitmap Y: 0 % / 70 %                       BitmapTriples saving Bitmap Z: 0 % / 71.5 %                       BitmapTriples saving Stream Y: 0 % / 74.5 %                       BitmapTriples saving Stream Z: 0 % / 79 %                      HDT Successfully generated.
+Total processing time: Clock(1 ms 976 us)  User(433 us)  System(541 us)
+ Counting appearances of predicates: 0 % / 0 %                       Creating Predicate bitmap: 0 % / 5.4 %                      Predicate Bitmap in 12 us
+ Generating predicate references: 0 % / 6.75 %                      Count predicates in 6 us
+ Counting appearances of objects: 0 % / 27 %                      Count Objects in 6 us Max was: 1
+ Creating Index bitmap: 0 % / 39.6 %                      Bitmap in 5 us
+Bitmap bits: 5 Ones: 5
+ Generating object references: 0 % / 42.75 %                      Object references in 9 us
+ Sorting object sublists: 0 % / 64.8 %                      Sort lists in 6 us
+Index generated in 59 us
+ BitmapTriples saving Bitmap Index: 0 % / 96 %                       BitmapTriples saving Array Index: 0 % / 97 %                       BitmapTriples saving Predicate Index: 0 % / 99 %                       BitmapTriples saving Predicate count: 0 % / 95 %                      RDF format: nquad
+ Loading Dictionary: 0 % / 0 %                       Generating Dictionary: 0 K triples processed.: 0 % / 0 %                       Sorting shared: 0 % / 40 %                       Sorting subjects: 20 % / 41 %                       Sorting objects: 50 % / 42.5 %                       Sorting predicates: 90 % / 44.5 %                       Update Dictionary IDs: 99 % / 44.95 %                       Loading Triples: 0 % / 50 %                       Generating Triples: 0 K triples processed.: 0 % / 50 %                       Sorting triples: 0 % / 89.2 %                       Converting to BitmapTriples: 0 % / 94.1 %                       Dictionary save shared area.: 0 % / 5 %                       Dictionary save subjects.: 0 % / 11.5 %                       Dictionary save predicates.: 0 % / 34.25 %                       Dictionary save objects.: 0 % / 44 %                       BitmapTriples saving Bitmap Y: 0 % / 70 %                       BitmapTriples saving Bitmap Z: 0 % / 71.5 %                       BitmapTriples saving Stream Y: 0 % / 74.5 %                       BitmapTriples saving Stream Z: 0 % / 79 %                      HDT Successfully generated.
+Total processing time: Clock(1 ms 36 us)  User(647 us)  System(277 us)
+ Counting appearances of predicates: 0 % / 0 %                       Creating Predicate bitmap: 0 % / 5.4 %                      Predicate Bitmap in 11 us
+ Generating predicate references: 0 % / 6.75 %                      Count predicates in 7 us
+ Counting appearances of objects: 0 % / 27 %                      Count Objects in 6 us Max was: 1
+ Creating Index bitmap: 0 % / 39.6 %                      Bitmap in 6 us
+Bitmap bits: 5 Ones: 5
+ Generating object references: 0 % / 42.75 %                      Object references in 8 us
+ Sorting object sublists: 0 % / 64.8 %                      Sort lists in 4 us
+Index generated in 57 us
+ BitmapTriples saving Bitmap Index: 0 % / 96 %                       BitmapTriples saving Array Index: 0 % / 97 %                       BitmapTriples saving Predicate Index: 0 % / 99 %                       BitmapTriples saving Predicate count: 0 % / 95 %                      

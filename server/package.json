@@ -7,8 +7,9 @@
     "rdf-dataset-fragmenter": "file:./rdf-dataset-fragmenter.js"
   },
   "scripts": {
-    "solidbench-generate": "node SolidBench.js/bin/solidbench.js generate -f ./fragmenter-config-pod.json",
+    "solidbench-generate": "node --max-old-space-size=10384 SolidBench.js/bin/solidbench.js generate -f ./fragmenter-config-pod.json",
     "solidbench-serve": "node SolidBench.js/bin/solidbench.js serve --config ./server-config.json",
     "clean": "rm -rf out-enhanced out-fragments out-queries out-snb out-validate out-validate-params/"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

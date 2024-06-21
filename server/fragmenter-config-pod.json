@@ -447,33 +447,6 @@
     "strategies": [
       {
         "@type": "FragmentationStrategySubject"
-      },
-      {
-        "@type": "FragmentationStrategyProbabilityQuadHandling",
-        "generationProbability": 100,
-        "partitionByResourceType": true,
-        "strategy": {
-          "@type": "FragmentationStrategyShape",
-          "tripleShapeTreeLocator": true,
-          "contentOfStorage": ["comments", "posts", "cards"],
-          "shapeConfig": {
-            "comments": {
-              "shapes": ["./shapes/comments.shexc"],
-              "directory": "comments",
-              "name": "Comment"
-            },
-            "posts": {
-              "shapes": ["./shapes/posts.shexc"],
-              "directory": "posts",
-              "name": "Post"
-            },
-            "cards": {
-              "shapes": ["./shapes/profile.shexc"],
-              "directory": "profile",
-              "name": "Profile"
-            }
-          }
-        }
       }
     ]
   },
@@ -482,14 +455,16 @@
     "@type": "QuadSinkComposite",
     "sinks": [
       {
-        "@type": "QuadSinkFile",
+        "@type": "QuadSinkHdt",
         "log": true,
         "outputFormat": "application/n-quads",
-        "fileExtension": ".nq",
+        "fileExtension": "$.nq",
         "iriToPath": {
           "http://": "out-fragments/http/",
           "https://": "out-fragments/https/"
-        }
+        },
+        "hdtConversionOpPoolSize": 5,
+        "deleteSourceFiles": true
       },
       {
         "@type": "QuadSinkFiltered",
