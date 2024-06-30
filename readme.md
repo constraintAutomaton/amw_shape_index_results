@@ -25,6 +25,31 @@ Example of a shape index
   ] ;
   si:isComplete true .
 ```
+Example of a shape
+
+```turtle
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://localhost:3000/pods/00000000000000000065/comments_shape#Comment> CLOSED {
+    a ldbcvoc:Comment?;
+    ldbcvoc:id xsd:long ;
+    ldbcvoc:creationDate xsd:dateTime ;
+    ldbcvoc:locationIP xsd:string  ;
+    ldbcvoc:browserUsed xsd:string ;
+    ldbcvoc:content xsd:string?;
+    ldbcvoc:lenght xsd:int ;
+    ldbcvoc:hasTag IRI *;
+    (
+        ldbcvoc:replyOf @<http://localhost:3000/pods/00000000000000000065/comments_shape#Post> *;
+        |
+        ldbcvoc:replyOf @<http://localhost:3000/pods/00000000000000000065/comments_shape#Comment> *;
+    );
+    ldbcvoc:isLocatedIn IRI ;
+    ldbcvoc:hasCreator @<http://localhost:3000/pods/00000000000000000065/comments_shape#Profile> ;
+}
+```
 
 To run the experiment two steps are necessary.
 - Generate and serve SolidBench
