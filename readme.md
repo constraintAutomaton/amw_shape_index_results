@@ -140,7 +140,7 @@ Table presenting the percentage of reductions of the shape index approach in rel
 
 ### Table of statistical significance
 
-Table presenting the statistical significance of the results.
+Table presenting the statistical significance of the results. SI stand for shape index and TI for type index.
 
 | Query                 | SI faster query execution   | P value   | SI different execution time than TI   | P value   |
 |-----------------------|-----------------------------|-----------|---------------------------------------|-----------|
