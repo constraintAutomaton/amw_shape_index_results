@@ -88,7 +88,7 @@ The results of our approach are in blue and the state of the art (type index wit
 The results have been generated with 50 repetitions and a timeout of 6000 ms. 
 The queries are denoted with first the initial of the query template (e.g., S1 for interactive-**s**hort-**1**), and the version of the concrete query (e.g., V0).
 ### Table of performance
-Table presenting the percentage of reductions of the shape index approach in relation to the type index approach. 
+Table presenting the percentage of reductions of the shape index approach in relation to the type index approach.SI stand for shape index and TI for type index.
 
 | Query (SI/TI)        | Std execution time   | Percentage of reduction HTTP request   | Percentage of reduction execution time   | Ratio of HTTP request by ratio of execution time   |
 |----------------------|----------------------|----------------------------------------|------------------------------------------|----------------------------------------------------|
