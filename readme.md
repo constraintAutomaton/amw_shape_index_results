@@ -44,10 +44,10 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     (
         ldbcvoc:replyOf @<http://localhost:3000/pods/00000000000000000065/comments_shape#Post> *;
         |
-        ldbcvoc:replyOf @<http://localhost:3000/pods/00000000000000000065/comments_shape#Comment> *;
+        ldbcvoc:replyOf @<http://localhost:3000/pods/00000000000000000065/posts_shape#Comment> *;
     );
     ldbcvoc:isLocatedIn IRI ;
-    ldbcvoc:hasCreator @<http://localhost:3000/pods/00000000000000000065/comments_shape#Profile> ;
+    ldbcvoc:hasCreator @<http://localhost:3000/pods/00000000000000000065/profile_shape#Profile> ;
 }
 ```
 
